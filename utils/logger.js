@@ -2,7 +2,7 @@ import winston from "winston";
 import chalk from "chalk";
 import figlet from "figlet";
 
-export const logger = winston.createLogger({
+const logger = winston.createLogger({
   format: winston.format.combine(
     winston.format.timestamp({
       format: "HH:mm:ss",
@@ -20,3 +20,5 @@ ${[info.timestamp]}: Check discord for order information.`;
   ),
   transports: [new winston.transports.Console()],
 });
+
+export default logger;

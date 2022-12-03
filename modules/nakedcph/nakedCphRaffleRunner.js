@@ -1,11 +1,10 @@
 import puppeteer from "puppeteer";
-import chalk from "chalk";
-import figlet from "figlet";
+import logger from "../../utils/logger";
 
 const nakedCphRaffleRunner = async () => {
   const browser = await puppeteer.launch({ headless: false });
   const page = await browser.newPage();
-  console.log("Beginning raffle entry...");
+  logger.info("Beginning raffle entry...");
   try {
     await page.goto(
       "https://www.nakedcph.com/en/search/bysearchdefinition/1402"
@@ -50,13 +49,10 @@ const nakedCphRaffleRunner = async () => {
     await page.click("#rule-optin-form > input[type=checkbox]:nth-child(23)");
     await page.click("#rule-optin-form > button");
     if (page.waitForNavigation()) {
-      console.log(
-        chalk.green("Successful checkout! Check discord for order information.")
-      );
-      console.log(chalk.green(figlet.textSync("SUCCESSFUL CHECKOUT")));
+      logger.info("success");
     }
   } catch (err) {
-    console.log(chalk.red("FAIL: Unable to complete raffle entry."));
+    logger.error("Unable to complete raffle entry.", err);
     await browser.close();
   }
 };
