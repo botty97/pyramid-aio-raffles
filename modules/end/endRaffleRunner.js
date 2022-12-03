@@ -75,6 +75,4 @@ const endRaffleRunner = async () => {
   }
 };
 
-endRaffleRunner();
-
 export default endRaffleRunner;
