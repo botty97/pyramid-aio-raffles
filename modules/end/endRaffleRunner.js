@@ -1,11 +1,10 @@
 import puppeteer from "puppeteer";
-import chalk from "chalk";
-import figlet from "figlet";
+import logger from "../../utils/logger";
 
 const endRaffleRunner = async () => {
   const browser = await puppeteer.launch({ headless: false });
   const page = await browser.newPage();
-  console.log("Beginning raffle entry...");
+  logger.info("Beginning raffle entry...");
   try {
     await page.goto(
       "https://launches.endclothing.com/product/new-balance-u9060wcg-u9060wcg"
@@ -64,13 +63,10 @@ const endRaffleRunner = async () => {
     );
 
     if (page.waitForNavigation()) {
-      console.log(
-        chalk.green("Successful checkout! Check discord for order information.")
-      );
-      console.log(chalk.green(figlet.textSync("SUCCESSFUL CHECKOUT")));
+      logger.info("success");
     }
   } catch (err) {
-    console.log(chalk.red("FAIL: Unable to complete raffle entry.", err));
+    logger.error("Unable to complete raffle entry.", err);
     await browser.close();
   }
 };
