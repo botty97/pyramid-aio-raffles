@@ -1,5 +1,5 @@
 import puppeteer from "puppeteer";
-import logger from "../../utils/logger";
+import logger from "../../utils/logger.js";
 
 const endRaffleRunner = async () => {
   const browser = await puppeteer.launch({ headless: false });
