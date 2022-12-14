@@ -4,6 +4,7 @@ import inquirer from "inquirer";
 import inquirerQuestions from "./utils/inquirerQuestions.js";
 import nakedCphRaffleRunner from "./modules/nakedcph/nakedCphRaffleRunner.js";
 import endRaffleRunner from "./modules/end/endRaffleRunner.js";
+import dsmRaffleRunner from "./modules/DSML/dsmRaffleRunner.js";
 
 console.log(chalk.blue(figlet.textSync("Welcome to PyramidAIO")));
 
@@ -15,6 +16,6 @@ inquirer.prompt(inquirerQuestions).then((answers) => {
   } else if (site === "nakedcph") {
     nakedCphRaffleRunner();
   } else if (site === "dsml") {
-    //run dsm london runner
+    dsmRaffleRunner();
   }
 });
