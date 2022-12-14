@@ -16,7 +16,5 @@ inquirer.prompt(inquirerQuestions).then((answers) => {
     nakedCphRaffleRunner();
   } else if (site === "dsml") {
     //run dsm london runner
-  } else if (site === "kith") {
-    // run kith runner
   }
 });
