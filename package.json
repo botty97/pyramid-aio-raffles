@@ -6,8 +6,8 @@
   "scripts": {
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel app -d build && babel index.js -d build",
-    "exe": "pkg build/index.js"
+    "build": "babel src -d build && babel index.js -d build",
+    "exe": "pkg app/index.js"
   },
   "type": "module",
   "repository": {
