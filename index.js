@@ -1,10 +1,10 @@
 import figlet from "figlet";
 import chalk from "chalk";
 import inquirer from "inquirer";
-import inquirerQuestions from "./app/utils/inquirerQuestions.js";
-import nakedCphRaffleRunner from "./app/modules/nakedcph/nakedCphRaffleRunner.js";
-import endRaffleRunner from "./app/modules/end/endRaffleRunner.js";
-import dsmRaffleRunner from "./app/modules/DSML/dsmRaffleRunner.js";
+import inquirerQuestions from "./src/utils/inquirerQuestions.js";
+import nakedCphRaffleRunner from "./src/modules/nakedcph/nakedCphRaffleRunner.js";
+import endRaffleRunner from "./src/modules/end/endRaffleRunner.js";
+import dsmRaffleRunner from "./src/modules/DSML/dsmRaffleRunner.js";
 
 console.log(chalk.blue(figlet.textSync("Welcome to PyramidAIO")));
 
