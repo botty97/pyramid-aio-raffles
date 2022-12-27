@@ -1,4 +1,4 @@
-import figlet from "figlet";
+// import figlet from "figlet";
 import chalk from "chalk";
 import inquirer from "inquirer";
 import inquirerQuestions from "./src/utils/inquirerQuestions.js";
@@ -6,7 +6,8 @@ import nakedCphRaffleRunner from "./src/modules/nakedcph/nakedCphRaffleRunner.js
 import endRaffleRunner from "./src/modules/end/endRaffleRunner.js";
 import dsmRaffleRunner from "./src/modules/DSML/dsmRaffleRunner.js";
 
-console.log(chalk.blue(figlet.textSync("Welcome to PyramidAIO")));
+// console.log(chalk.blue(figlet.textSync("Welcome to PyramidAIO")));
+console.log(chalk.blue("Welcome to PyramidAIO"));
 
 inquirer.prompt(inquirerQuestions).then((answers) => {
   const { site } = answers;
