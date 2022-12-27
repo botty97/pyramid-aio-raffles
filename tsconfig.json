@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "noImplicitAny": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "outDir": "build",
+    "esModuleInterop": true,
+    "target": "es2015"
+  },
+  "include": ["src/**/*", "index.ts"],
+  "exclude": ["src/**/*", "node_modules", "**/*.spec.ts"]
+}
