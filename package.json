@@ -7,7 +7,7 @@
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
-    "exe": "pkg build/index.js"
+    "exe": "pkg build/index.js --public"
   },
   "type": "module",
   "repository": {
