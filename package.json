@@ -6,8 +6,8 @@
   "scripts": {
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel src -d build/src && babel index.js -d build",
-    "exe": "pkg build/index.js"
+    "build": "tsc",
+    "exe": "pkg build/index.js --public"
   },
   "type": "module",
   "repository": {
@@ -21,9 +21,6 @@
   },
   "homepage": "https://github.com/botty97/pyramid-aio-raffles#readme",
   "dependencies": {
-    "@babel/cli": "^7.19.3",
-    "@babel/core": "^7.20.5",
-    "@babel/preset-env": "^7.20.2",
     "discord.js": "^14.6.0",
     "dotenv": "^8.2.0",
     "puppeteer": "^19.4.1",

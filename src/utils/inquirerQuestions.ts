@@ -4,7 +4,7 @@ const inquirerQuestions = [
     name: "site",
     message: "Select a module to use",
     choices: ["End", "NakedCPH", "DSML"],
-    filter(val) {
+    filter(val: string) {
       return val.toLowerCase();
     },
   },
