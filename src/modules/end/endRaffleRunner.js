@@ -7,7 +7,7 @@ const endRaffleRunner = async () => {
   logger.info("Beginning raffle entry...");
   try {
     await page.goto(
-      "https://launches.endclothing.com/product/new-balance-u9060wcg-u9060wcg"
+      "https://launches.endclothing.com/product/new-balance-m1906dd-m1906dd"
     );
 
     await page.waitForSelector(
@@ -25,12 +25,12 @@ const endRaffleRunner = async () => {
     );
 
     //login
-    await page.type("#email", "test@gmail.com");
+    await page.type("#email", "connor.botterill@yahoo.co.uk");
     await page.click(
       "#__next > div.sc-2zw5y3-3.gFBtiH > div > div.sc-2zw5y3-2.lfEYMW > div > div > div > div > form > div.sc-1vpyvai-1.hHyGJa > button"
     );
     await page.waitForSelector("#password");
-    await page.type("#password", "--");
+    await page.type("#password", "Chewbacca123");
     await page.click(
       "#__next > div.sc-2zw5y3-3.gFBtiH > div > div.sc-2zw5y3-2.lfEYMW > div > div > div > div > form > div.sc-1vpyvai-1.hHyGJa > button"
     );
@@ -58,8 +58,9 @@ const endRaffleRunner = async () => {
       "#__next > div.sc-2zw5y3-3.gFBtiH > div > div.sc-2zw5y3-2.lfEYMW > div > div > div > div:nth-child(1) > div.sc-f369zt-3.dvBmeP > button"
     );
 
+    //if i understand button
     await page.click(
-      "#__next > div.sc-2zw5y3-3.gFBtiH > div > div.sc-2zw5y3-2.lfEYMW > div > div > div > div.sc-1vpyvai-1.hHyGJa > button"
+      "#__next > div.sc-2zw5y3-3.gFBtiH > div > div.sc-2zw5y3-2.lfEYMW > div > div > div > div:nth-child(1) > div.sc-f369zt-3.dvBmeP > button"
     );
 
     if (page.waitForNavigation()) {
@@ -67,7 +68,7 @@ const endRaffleRunner = async () => {
     }
   } catch (err) {
     logger.error("Unable to complete raffle entry.", err);
-    await browser.close();
+    // await browser.close();
   }
 };
 
