@@ -1,0 +1,36 @@
+{
+  "Settings": {
+    "LicenseKey": "null",
+    "WebHook": "discord",
+    "Region": "might not be needed",
+    "2CaptchaToken": "random",
+    "Delay": "might not be needed"
+  },
+  "AddressProfiles": [
+    {
+      "ProfileName": "random",
+      "Name": "Name",
+      "Surname": "Surname",
+      "PhoneNumber": "null",
+      "PhoneNumberPrefix": "x",
+      "AddressStreet": "random",
+      "AddressNumber": "123",
+      "Address2": "",
+      "City": "null",
+      "Region": "null",
+      "Country": "UK",
+      "CountryID": "null",
+      "Postcode": "null"
+    }
+  ],
+  "CCProfiles": [
+    {
+      "ProfileName": "Main",
+      "CardName": "Null",
+      "CardNumber": "Null",
+      "CardCvv": "null",
+      "ExpirationMonth": "09",
+      "ExpirationYear": "2020"
+    }
+  ]
+}
