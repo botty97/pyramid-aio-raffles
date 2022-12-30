@@ -24,11 +24,8 @@ database still pending
 - [Twitter](https://twitter.com/PyramidAIO)
 - [Discord](not yet)
 
-```
-
 # 💌 P.S.
 
 PyramidRaffles is a free software in beta to help people be more successful in purchasing footwear. Once beta has been successful this will be moving to a paid version.
 
 For any questions feel free to reach me using [Twitter](https://twitter.com/PyramidAIO), by email at palace@pyramidbots.com or using discord Palace#9687
-```
