@@ -2,20 +2,17 @@ import figlet from "figlet";
 import chalk from "chalk";
 import inquirer from "inquirer";
 import inquirerQuestions from "./src/utils/inquirerQuestions";
-import nakedCphRaffleRunner from "./src/modules/sites/nakedcph/nakedCphRaffleRunner";
-import endRaffleRunner from "./src/modules/sites/end/endRaffleRunner";
-import dsmRaffleRunner from "./src/modules/sites/DSML/dsmRaffleRunner";
-
+import { end, dsm, nakedCph } from "./src/modules/sites";
 console.log(chalk.blue(figlet.textSync("Welcome to Pyramid Raffles")));
 
 inquirer.prompt(inquirerQuestions).then((answers) => {
   const { site } = answers;
 
   if (site === "end") {
-    endRaffleRunner();
+    end();
   } else if (site === "nakedcph") {
-    nakedCphRaffleRunner();
+    nakedCph();
   } else if (site === "dsml") {
-    dsmRaffleRunner();
+    dsm();
   }
 });
