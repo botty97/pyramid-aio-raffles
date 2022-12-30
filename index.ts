@@ -6,7 +6,7 @@ import nakedCphRaffleRunner from "./src/modules/sites/nakedcph/nakedCphRaffleRun
 import endRaffleRunner from "./src/modules/sites/end/endRaffleRunner";
 import dsmRaffleRunner from "./src/modules/sites/DSML/dsmRaffleRunner";
 
-console.log(chalk.blue(figlet.textSync("Welcome to PyramidAIO")));
+console.log(chalk.blue(figlet.textSync("Welcome to Pyramid Raffles")));
 
 inquirer.prompt(inquirerQuestions).then((answers) => {
   const { site } = answers;
