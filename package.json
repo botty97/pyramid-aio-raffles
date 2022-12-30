@@ -26,6 +26,7 @@
     "winston": "^3.8.2"
   },
   "devDependencies": {
+    "@angablue/exe": "^1.2.0",
     "@types/figlet": "^1.5.5",
     "@types/inquirer": "^9.0.3",
     "@types/node": "^18.11.18",
