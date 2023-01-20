@@ -5,6 +5,7 @@ const nakedCphRaffleRunner = async () => {
   const browser = await puppeteer.launch({ headless: false });
   const page = await browser.newPage();
   logger.info("Beginning raffle entry...");
+  logger.info("Navigating to raffle page...");
   try {
     await page.goto(
       "https://www.nakedcph.com/en/search/bysearchdefinition/1402"
@@ -15,6 +16,7 @@ const nakedCphRaffleRunner = async () => {
     await page.click(
       "#coiPage-1 > div.coi-banner__page-footer > button.coi-banner__accept"
     );
+    logger.info("Filling out form...");
     //fill out form
     await page.type(
       "#rule-optin-form > input[type=email]:nth-child(4)",
@@ -45,6 +47,7 @@ const nakedCphRaffleRunner = async () => {
       "#rule-optin-form > input[type=text]:nth-child(18)",
       `London`
     );
+    logger.info("Submitting raffle entry...");
     await page.type("#cars", "United Kingdom");
     await page.click("#rule-optin-form > input[type=checkbox]:nth-child(23)");
     await page.click("#rule-optin-form > button");
