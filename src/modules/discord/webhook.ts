@@ -7,11 +7,27 @@ const webhookClient = new WebhookClient({
   url: process.env.WEBHOOK_URL,
 });
 
-const embed = new EmbedBuilder().setTitle("Some Title").setColor(0x00ffff);
+const embed = new EmbedBuilder()
+  .setColor(0x0099ff)
+  .setTitle("Naked Successful Checkout")
+  .setThumbnail("https://i.imgur.com/9ZybmnL.png")
+  .addFields({
+    name: "Raffle Link",
+    value: `test`,
+    inline: true,
+  })
+  .addFields({ name: "Email", value: `test@email.com` })
+  .addFields({ name: "Size", value: "N/A" })
+  .addFields({ name: "Extra Info", value: "Remember to check your emails" })
+  .setTimestamp()
+  .setFooter({
+    text: "PyramidAIO",
+    iconURL: "https://i.imgur.com/cE2Ms9p.jpg",
+  });
 
 webhookClient.send({
-  content: "Webhook test",
-  username: "some-username",
-  avatarURL: "https://i.imgur.com/AfFp7pu.png",
+  content: "Successful entry",
+  username: "PyramidRaffles",
+  avatarURL: "https://i.imgur.com/cE2Ms9p.jpg",
   embeds: [embed],
 });
