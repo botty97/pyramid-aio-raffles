@@ -1,5 +1,6 @@
 import puppeteer from "puppeteer";
 import logger from "../../../utils/logger";
+import webhook from "../../discord/webhook";
 
 const nakedCphRaffleRunner = async () => {
   const browser = await puppeteer.launch({ headless: false });
@@ -54,6 +55,7 @@ const nakedCphRaffleRunner = async () => {
     if (page.waitForNavigation()) {
       logger.info("success");
     }
+    webhook("NakedCPH", "https://i.imgur.com/9ZybmnL.png", "connor@gmail.com");
   } catch (err) {
     logger.error("Unable to complete raffle entry.", err);
     await browser.close();
