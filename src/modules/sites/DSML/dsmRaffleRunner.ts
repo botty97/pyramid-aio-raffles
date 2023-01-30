@@ -14,7 +14,10 @@ const dsmRaffleRunner = async () => {
       "#product > div.product__content > div.product__actions > button"
     );
 
+    logger.info("Product form found.");
+
     //wait for form to load and fill out
+    logger.info("Filling out entry form...");
     await page.waitForSelector("#drawing-first-name");
     await page.select(
       "#app > div.content-wrapper > div > div > div > div > div > div.drawing__option-group > div > select",
@@ -28,13 +31,14 @@ const dsmRaffleRunner = async () => {
     await page.select("#drawing-country", "FR");
 
     //fill out card details
+    logger.info("Entering credit card information...");
     await page.waitForSelector(".ElementsApp.is-empty");
 
     await page.click("#agreeToTerms");
 
-    // if (page.waitForNavigation()) {
-    //   logger.info("success");
-    // }
+    if (page.waitForNavigation()) {
+      logger.info("success");
+    }
   } catch (err) {
     logger.error("Unable to complete raffle entry.", err);
     await browser.close();

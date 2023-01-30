@@ -24,6 +24,8 @@ const endRaffleRunner = async () => {
       (elem) => elem.click()
     );
 
+    logger.info("Product found, logging in...");
+
     //login
     await page.type("#email", "connor.botterill@yahoo.co.uk");
     await page.click(
@@ -35,7 +37,10 @@ const endRaffleRunner = async () => {
       "#__next > div.sc-2zw5y3-3.gFBtiH > div > div.sc-2zw5y3-2.lfEYMW > div > div > div > div > form > div.sc-1vpyvai-1.hHyGJa > button"
     );
 
+    logger.info("Successfully logged in.");
+
     //complete entry information
+    logger.info("Filling out raffle form...");
     await page.waitForSelector(
       "#__next > div.sc-2zw5y3-3.gFBtiH > div > div.sc-2zw5y3-2.lfEYMW > div > div > div > div:nth-child(1) > div.sc-1p4gaia-0.edjMjR > button.sc-dld20s-0.efIRgB > div > div"
     );
@@ -53,6 +58,8 @@ const endRaffleRunner = async () => {
     await page.click(
       "#__next > div.sc-2zw5y3-3.gFBtiH > div > div.sc-69kooh-0.inWVVL > div > div > div.sc-1vpyvai-1.hHyGJa > button"
     );
+
+    logger.info("Filling out credit card information...");
 
     await page.click(
       "#__next > div.sc-2zw5y3-3.gFBtiH > div > div.sc-2zw5y3-2.lfEYMW > div > div > div > div:nth-child(1) > div.sc-f369zt-3.dvBmeP > button"
