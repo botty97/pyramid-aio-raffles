@@ -1,5 +1,6 @@
 import puppeteer from "puppeteer";
 import logger from "../../../utils/logger";
+import webhook from "../../discord/webhook";
 
 const dsmRaffleRunner = async () => {
   const browser = await puppeteer.launch({ headless: false });
@@ -39,6 +40,12 @@ const dsmRaffleRunner = async () => {
     if (page.waitForNavigation()) {
       logger.info("success");
     }
+
+    webhook(
+      "Dover Street Market",
+      "https://i.imgur.com/q3epoXf.png",
+      "test@trial.com"
+    );
   } catch (err) {
     logger.error("Unable to complete raffle entry.", err);
     await browser.close();
