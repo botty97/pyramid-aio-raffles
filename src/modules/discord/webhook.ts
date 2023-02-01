@@ -10,7 +10,7 @@ const webhook = (site: string, thumbnail: string, email: string) => {
 
   const embed = new EmbedBuilder()
     .setColor(0x0099ff)
-    .setTitle(`${site} Successful Checkout`)
+    .setTitle(`${site} Successful Entry`)
     .setThumbnail(thumbnail)
     .addFields({
       name: "Raffle Link",
