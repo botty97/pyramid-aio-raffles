@@ -46,7 +46,7 @@ const footpatrolRaffleRunner = async () => {
 
     //enter city of residence
     await page.type(
-      "#block-7e8adfbd-f711-41bf-8ab0-56f51f5fd73b > div > div > div > div > div > div > div > div.SpacerWrapper-sc-__sc-4rs8xl-0.kOpjPh > div.InputWrapper-sc-__sc-26uh88-1.iLBPjJ > input",
+      "#block-352c9a8a-4c2d-4753-ac43-9453dce429a5 > div > div > div > div > div > div > div > div.SpacerWrapper-sc-__sc-4rs8xl-0.kOpjPh > div.InputWrapper-sc-__sc-26uh88-1.iLBPjJ > input",
       "London"
     );
 
