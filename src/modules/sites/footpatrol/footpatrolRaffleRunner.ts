@@ -52,9 +52,17 @@ const footpatrolRaffleRunner = async () => {
 
     await page.keyboard.press("Enter");
 
-    //enter shoe size
-    await page.select(
-      "#dropdown-8660326c-30fb-430c-9b63-38725b1bfa62-R6SWj1oypGLuO3ji"
+    // enter shoe size
+    // this will open dropdown menu
+    await page.$eval(
+      "#block-8660326c-30fb-430c-9b63-38725b1bfa62 > div > div > div > div.ContentWrapper-sc-__sc-1esu8nk-4.bfAttW > div > div > div > div.SpacerWrapper-sc-__sc-4rs8xl-0.kOpjPh > div:nth-child(1) > div > div.InputWrapper-sc-__sc-1w8q90m-3.dfhdVO > button",
+      (elem) => elem.click()
+    );
+
+    //still yet to find solution to select within the dropdown
+    await page.$eval(
+      "#dropdown-8660326c-30fb-430c-9b63-38725b1bfa62-R6SWj1oypGLuO3ji-option-3 > div.ChoiceContent-sc-__sc-1r651ck-0.erQwZM",
+      (elem) => elem.click()
     );
 
     if (await page.waitForNavigation()) {
