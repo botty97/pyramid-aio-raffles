@@ -2,7 +2,7 @@ import figlet from "figlet";
 import chalk from "chalk";
 import inquirer from "inquirer";
 import inquirerQuestions from "./src/utils/inquirerQuestions";
-import { end, dsm, nakedCph } from "./src/modules/sites";
+import { end, dsm, nakedCph, footpatrol } from "./src/modules/sites";
 import settings from "./settings.json";
 
 const licenseKey: string = "12341241241";
@@ -26,6 +26,8 @@ if (settings.Settings.LicenseKey !== licenseKey) {
       nakedCph();
     } else if (site === "dsml") {
       dsm();
+    } else if (site === "footpatrol") {
+      footpatrol();
     }
   });
 }
