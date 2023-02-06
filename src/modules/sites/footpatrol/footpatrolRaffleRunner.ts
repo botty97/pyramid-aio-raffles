@@ -65,6 +65,20 @@ const footpatrolRaffleRunner = async () => {
       (elem) => elem.click()
     );
 
+    // enter the captcha, seems to be static value
+    // TODO: scrape site for the value and automatically enter it
+    await page.type(
+      "#block-af25688e-f634-47c5-b974-8d73c05ab61d > div > div > div > div > div > div > div > div.SpacerWrapper-sc-__sc-4rs8xl-0.kOpjPh > div.InputWrapper-sc-__sc-26uh88-1.iLBPjJ > input",
+      "fooTP4TRoL"
+    );
+
+    //T&Cs
+
+    await page.$eval(
+      "#block-cd167302-ef4e-4f15-8233-a5d06020ca12 > div > div > div > div > div > div > fieldset > div.SpacerWrapper-sc-__sc-4rs8xl-0.kOpjPh > div > div:nth-child(1) > div > div > div:nth-child(1) > div > div > div.ChoiceContent-sc-__sc-1r651ck-0.cFezUN",
+      (elem) => elem.click()
+    );
+
     if (await page.waitForNavigation()) {
       logger.info("success");
     }
