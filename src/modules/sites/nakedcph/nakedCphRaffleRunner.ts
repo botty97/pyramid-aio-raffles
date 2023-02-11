@@ -1,6 +1,6 @@
 import puppeteer from "puppeteer";
 import logger from "../../../utils/logger";
-import webhook from "../../discord/webhook";
+import webhook from "../../../utils/webhook";
 
 const nakedCphRaffleRunner = async () => {
   const browser = await puppeteer.launch({ headless: false });
