@@ -11,21 +11,37 @@ const afewRaffleRunner = async () => {
       "https://en.afew-store.com/products/air-jordan-wmns-4-retro-white-oil-green-dark-ash-neutral-grey"
     );
 
-    await page.click(
-      "#product > div.product__content > div.product__actions > button"
-    );
+    await page.waitForTimeout(5000);
 
-    logger.info("Product form found.");
+    await page.click("#onetrust-accept-btn-handler");
 
-    if (await page.waitForNavigation()) {
-      logger.info("success");
-    }
+    // await page.click(
+    //   "#product-section > header > div > div.row > div.col.col-12.col-lg-4.position-sticky > div.size-picker.mt-2 > ul > li:nth-child(1)"
+    // );
 
-    webhook("AFEW", "", "test@trial.com");
+    logger.info("Size selected.");
+
+    // enter instagram
+    // await page.type("#raffle-instagram", "testInsta");
+
+    //enter raffle button
+    // await page.click(
+    //   "#product-section > header > div > div.row > div.col.col-12.col-lg-4.position-sticky > form > div.row > div:nth-child(2) > button"
+    // );
+
+    logger.info("Proceeding to raffle form...");
+
+    // if (await page.waitForNavigation()) {
+    //   logger.info("success");
+    // }
+
+    // webhook("AFEW", "", "test@trial.com");
   } catch (err) {
     logger.error("Unable to complete raffle entry.", err);
     await browser.close();
   }
 };
+
+afewRaffleRunner();
 
 export default afewRaffleRunner;
