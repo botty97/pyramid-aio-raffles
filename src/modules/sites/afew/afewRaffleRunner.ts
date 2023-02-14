@@ -5,6 +5,8 @@ import webhook from "../../../utils/webhook";
 const afewRaffleRunner = async () => {
   const browser = await puppeteer.launch({ headless: false });
   const page = await browser.newPage();
+
+  //this needs to be sorted for universal devices
   await page.setViewport({
     width: 1083,
     height: 777,
@@ -65,6 +67,12 @@ const afewRaffleRunner = async () => {
     await page.type("#checkout_shipping_address_zip", "lo2 23e");
 
     //submit shipping
+    await page.click("#continue_button");
+
+    // submit to payment
+    await page.click("#continue_button");
+
+    //review order
     await page.click("#continue_button");
 
     // if (await page.waitForNavigation()) {
