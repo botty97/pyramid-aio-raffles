@@ -44,6 +44,29 @@ const afewRaffleRunner = async () => {
 
     logger.info("Proceeding to raffle form...");
 
+    //enter email
+    await page.type("#checkout_email", "test@gmail.com");
+
+    //enter shipping
+
+    //firstname
+    await page.type("#checkout_shipping_address_first_name", "test");
+
+    //lastname
+    await page.type("#checkout_shipping_address_last_name", "test");
+
+    //street address/number
+    await page.type("#checkout_shipping_address_address1", "21 random road");
+
+    //city
+    await page.type("#checkout_shipping_address_city", "london");
+
+    //postcode
+    await page.type("#checkout_shipping_address_zip", "lo2 23e");
+
+    //submit shipping
+    await page.click("#continue_button");
+
     // if (await page.waitForNavigation()) {
     //   logger.info("success");
     // }
