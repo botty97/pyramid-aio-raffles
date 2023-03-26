@@ -8,8 +8,7 @@
     "start:local": "ts-node localIndex.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
-    "exe": "pkg build/index.js --public --config package.json",
-    "ship": "node src/utils/build.js"
+    "exe": "pkg build/index.js --public --config package.json"
   },
   "pkg": {
     "scripts": [],
