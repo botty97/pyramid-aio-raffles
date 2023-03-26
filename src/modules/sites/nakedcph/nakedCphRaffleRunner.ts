@@ -1,8 +1,11 @@
 import puppeteer from "puppeteer";
 import logger from "../../../utils/logger";
 import webhook from "../../../utils/webhook";
+import csvToJson from "../../../utils/csvToJson";
 
 const nakedCphRaffleRunner = async () => {
+  const data = await csvToJson();
+
   const browser = await puppeteer.launch({ headless: false });
   const page = await browser.newPage();
   logger.info("Beginning raffle entry...");
